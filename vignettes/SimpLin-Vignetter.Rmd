@@ -17,7 +17,7 @@ library(SimpLin)
 To illustrate how to use this package, we will use the `mtcars` which does not require the installation of a package. We will regress miles per gallon (mpg) on weight (wt). 
 
 ```{r, comment = NA}
-regress_list <- SimpLin(x = mtcars$wt, y = mtcars$mpg)
+regress_list <- SimpLinR(x = mtcars$wt, y = mtcars$mpg)
 ```
 
 To get the vector of estimated regression coefficients run this line of code. 
