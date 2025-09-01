@@ -1,12 +1,13 @@
 #' A function that fits a simple linear regression model
 #'
 #' This function takes two vectors, x and y, as inputs. It then fits a simple
-#' regression model and returns a list with egression coefficients, their
+#' regression model and returns a list with regression coefficients, their
 #' corresponding standard errors and 95% confidence intervals, residuals,
 #' and predicted values as a list.
 #'
-#' @param x A vector.
-#' @param y A vector equal in length to x.
+#' @param x A numeric vector serving as the explanatory variable.
+#' @param y A numeric vector equal in length to x serving as the response
+#' variable.
 #'
 #' @returns A list. [["coefficients"] will give the beta vector where the first
 #' element is the intercept term and the second element is the slope term,

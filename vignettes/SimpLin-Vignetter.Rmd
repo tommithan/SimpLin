@@ -1,0 +1,15 @@
+---
+title: "Getting Started with the SimpLin Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with the SimpLin Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+If you have not downloaded the package from GitHub, uncomment the first line of code and run that before running the library statement. 
+
+```{r setup}
+devtools::install_github("tommithan/SimpLin")
+library(SimpLin)
+```
