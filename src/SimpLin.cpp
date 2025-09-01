@@ -13,9 +13,9 @@ Rcpp::List SimpLinCpp(const arma::vec& x, const arma::vec& y) {
   double varBhat0 = varBhat(0,0);
   double varBhat1 = varBhat(1,1);
   double tCrit = R::qt(0.975, y.size() - 2, 1, 0);
-  arma::vec B0_CI = {bHat[0] - sqrt(varBhat0)*tCrit,
+  arma::rowvec B0_CI = {bHat[0] - sqrt(varBhat0)*tCrit,
                                    bHat[0] + sqrt(varBhat0)*tCrit};
-  arma::vec B1_CI = {bHat[1] - sqrt(varBhat1)*tCrit,
+  arma::rowvec B1_CI = {bHat[1] - sqrt(varBhat1)*tCrit,
                      bHat[1] + sqrt(varBhat1)*tCrit};
   return Rcpp::List::create(
     Rcpp::Named("coefficients") = bHat,

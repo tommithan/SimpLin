@@ -10,6 +10,60 @@ vignette: >
 If you have not downloaded the package from GitHub, uncomment the first line of code and run that before running the library statement. 
 
 ```{r setup}
-devtools::install_github("tommithan/SimpLin")
+#devtools::install_github("tommithan/SimpLin")
 library(SimpLin)
 ```
+
+To illustrate how to use this package, we will use the `mtcars` which does not require the installation of a package. We will regress miles per gallon (mpg) on weight (wt). 
+
+```{r, comment = NA}
+regress_list <- SimpLin(x = mtcars$wt, y = mtcars$mpg)
+```
+
+To get the vector of estimated regression coefficients run this line of code. 
+
+```{r, comment = NA}
+regress_list[["coefficients"]]
+```
+The first entry corresponds to the estimate of the intercept term and the second entry corresponds to the estimate of the slope term. i.e. -5.344472 is our estimate for $\hat{\beta}_1$. 
+
+Here is how you access $SE(\hat{\beta_0}). 
+```{r, comment = NA}
+regress_list[["SE B0"]]
+```
+
+Here is how you access $SE(\hat{\beta_0}). 
+
+```{r, comment = NA}
+regress_list[["SE B0"]]
+```
+
+Here is how you access $SE(\hat{\beta_1}). 
+
+```{r, comment = NA}
+regress_list[["SE B1"]]
+```
+
+Here is the 95% confidence interval for $\hat{\beta_0}$. 
+
+```{r, comment = NA}
+regress_list[["95% CI B0"]]
+```
+
+Here is the 95% confidence interval for $\hat{\beta_1}$. 
+
+```{r, comment = NA}
+regress_list[["95% CI B1"]]
+```
+
+Here is a vector of the first 5 predicted values. 
+
+```{r, comment = NA}
+head(regress_list[["y hat"]], 5)
+```
+Here is the first 5 entries from the vector of residuals. If you want all teh residuals, or predicted values, just don't use the head function. 
+
+```{r, comment = NA}
+head(regress_list[["residuals"]], 5)
+```
+
