@@ -18,7 +18,7 @@
 #' will give the residuals.
 #'
 #' @export
-SimpLin <- function(x, y) {
+SimpLinR <- function(x, y) {
   if (is.atomic(c(x,y)) == FALSE | is.numeric(c(x,y)) == FALSE) {
     stop(
       "x and y must be numeric vectors",
