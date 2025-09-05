@@ -7,12 +7,10 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-If you have not downloaded the package from GitHub, uncomment the first line of code and run that before running the library statement. 
-
-```{r setup}
-#devtools::install_github("tommithan/SimpLin")
+```{r, setup}
 library(SimpLin)
 ```
+
 
 To illustrate how to use this package, we will use the `mtcars` which does not require the installation of a package. We will regress miles per gallon (mpg) on weight (wt). 
 
