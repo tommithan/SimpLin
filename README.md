@@ -7,6 +7,6 @@
 You can install the development version of `SimpLin` from GitHub with:
 
 ```r
-devtools::install_github("tommithan/SimpLin")
+devtools::install_github("tommithan/SimpLin", build_vignettes = TRUE)
 ```
 If you do not have `devtools` installed, you will need to install it before running this code. 
