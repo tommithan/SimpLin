@@ -14,7 +14,7 @@ If you do not have `devtools` installed, you will need to install it before runn
 You can also download `SimpLin_0.0.0.9000.tar.gz` available in the repository and run: 
 
 ```r
-install.packages("path/to/SimpLin_0.0.0.9000.tar.gz", repos = NULL, type = "source")
+devtools::install_local("SimpLin_0.0.0.9000.tar.gz", build_vignettes = TRUE)
 ```
-Changing the path to be your path to the file. 
+When running this line, make sure `SimpLin_0.0.0.9000.tar.gz` is in your working directory.
 
